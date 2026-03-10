@@ -297,8 +297,8 @@ html[dir="rtl"] .main-content { margin-right: 200px; }
   transform: scale(1.1);
   z-index: 2;
   width: 100%;
-  max-width: 550px;
-  padding: 25px 30px;
+  max-width: 600px;
+  padding: 30px 35px;
   background: linear-gradient(145deg, #2a2a2a, #1e1e1e);
   border-radius: 20px;
   border: 1px solid rgba(212, 175, 55, 0.2);
@@ -306,7 +306,7 @@ html[dir="rtl"] .main-content { margin-right: 200px; }
     0 10px 30px rgba(0, 0, 0, 0.4),
     0 0 0 1px rgba(212, 175, 55, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  gap: 25px;
+  gap: 30px;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -323,7 +323,6 @@ html[dir="rtl"] .main-content { margin-right: 200px; }
   width: 140px;
   height: 140px;
   flex-shrink: 0;
-  flex-grow: 0;
   border-radius: 50%;
   padding: 4px;
   background: linear-gradient(135deg, #d4af37, #b8962e, #d4af37);
@@ -363,13 +362,12 @@ html[dir="rtl"] .main-content { margin-right: 200px; }
 
 .lead-member .team-info {
   flex: 1;
-  flex-grow: 1;
   text-align: left;
-  min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 8px;
+  min-width: 250px;
 }
 
 html[dir="rtl"] .lead-member {
@@ -382,17 +380,13 @@ html[dir="rtl"] .lead-member .team-info {
 }
 
 .lead-member .team-info .team-name {
-  font-size: clamp(18px, 4vw, 24px);
+  font-size: 22px;
   font-weight: 700;
   color: #ffd966;
   margin: 0;
   letter-spacing: 0.5px;
   line-height: 1.4;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
   display: block;
-  width: 100%;
 }
 
 .lead-member .team-info .team-name::after {
@@ -406,7 +400,7 @@ html[dir="rtl"] .lead-member .team-info {
 }
 
 .lead-member .team-info .team-role {
-  font-size: clamp(14px, 3vw, 16px);
+  font-size: 15px;
   color: #ffd966;
   font-weight: 600;
   text-transform: uppercase;
@@ -414,7 +408,6 @@ html[dir="rtl"] .lead-member .team-info {
   opacity: 0.9;
   margin: 0;
   display: block;
-  width: 100%;
 }
 
 .lead-member .photo-glow {
@@ -566,11 +559,7 @@ html[dir="rtl"] .lead-member .team-info {
   margin: 0;
   letter-spacing: 0.5px;
   line-height: 1.3;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
   display: block;
-  width: 100%;
 }
 
 .team-member .team-info .team-role {
@@ -581,7 +570,6 @@ html[dir="rtl"] .lead-member .team-info {
   letter-spacing: 1px;
   margin: 0;
   display: block;
-  width: 100%;
 }
 
 /* Staggered Animation */
@@ -628,9 +616,9 @@ html[dir="rtl"] .lead-member .team-info {
   
   .lead-member {
     transform: scale(1);
-    max-width: 450px;
-    padding: 20px;
-    gap: 20px;
+    max-width: 500px;
+    padding: 25px;
+    gap: 25px;
   }
   
   .lead-member .team-photo-wrapper {
@@ -639,7 +627,7 @@ html[dir="rtl"] .lead-member .team-info {
   }
   
   .lead-member .team-info .team-name {
-    font-size: clamp(16px, 4vw, 20px);
+    font-size: 20px;
   }
 }
 
@@ -649,194 +637,139 @@ html[dir="rtl"] .lead-member .team-info {
   .team-main-title { font-size: 30px; }
   .team-main-subtitle { font-size: 14px; margin-bottom: 35px; }
   
-  /* Team Row - Stack members vertically */
   .team-row {
-    display: flex !important;
-    flex-direction: column !important;
+    flex-direction: column;
     align-items: center;
     gap: 15px;
     width: 100%;
   }
   
-  /* ALL Team Members - HORIZONTAL Layout (WIDE rectangle, not tall) */
   .team-member {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    width: 95% !important;
-    max-width: 420px !important;
-    min-width: 280px !important;
-    padding: 15px 18px !important;
-    gap: 15px !important;
-    height: auto !important;
-    min-height: 90px !important;
-    text-align: left !important;
+    flex-direction: row;
+    width: 95%;
+    max-width: 400px;
+    padding: 15px 18px;
+    gap: 15px;
+    min-height: 90px;
+    text-align: left;
   }
   
-  /* RTL: Photo on right, text on left */
   html[dir="rtl"] .team-member {
-    flex-direction: row-reverse !important;
-    justify-content: flex-start !important;
-    text-align: right !important;
+    flex-direction: row-reverse;
+    text-align: right;
   }
   
-  /* Photo - Fixed size, don't shrink */
   .team-member .team-photo-wrapper {
-    width: 80px !important;
-    height: 80px !important;
-    margin: 0 !important;
-    flex-shrink: 0 !important;
-    flex-grow: 0 !important;
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    flex-shrink: 0;
   }
   
-  /* Text Area - Takes ALL remaining space */
   .team-member .team-info {
-    flex: 1 1 auto !important;
-    flex-grow: 1 !important;
-    min-width: 180px !important;
-    max-width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: flex-start !important;
-    gap: 5px !important;
-    overflow: visible !important;
-    width: auto !important;
+    flex: 1;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
   }
   
   html[dir="rtl"] .team-member .team-info {
-    align-items: flex-end !important;
+    align-items: flex-end;
   }
   
-  /* Team Name - Horizontal text */
   .team-member .team-info .team-name {
-    font-size: 15px !important;
-    font-weight: 600 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    line-height: 1.4 !important;
-    text-align: left !important;
-    white-space: normal !important;
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    overflow: visible !important;
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    letter-spacing: 0.3px !important;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+    text-align: left;
+    display: block;
   }
   
   html[dir="rtl"] .team-member .team-info .team-name {
-    text-align: right !important;
+    text-align: right;
   }
   
-  /* Team Role - Horizontal text */
   .team-member .team-info .team-role {
-    font-size: 12px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: left !important;
-    display: block !important;
-    width: 100% !important;
-    white-space: normal !important;
-    overflow: visible !important;
+    font-size: 12px;
+    margin: 0;
+    text-align: left;
+    display: block;
   }
   
   html[dir="rtl"] .team-member .team-info .team-role {
-    text-align: right !important;
+    text-align: right;
   }
   
-  /* ========== TEAM LEADER - MOBILE (WIDE rectangle) ========== */
   .lead-member {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    max-width: 420px !important;
-    min-width: 280px !important;
-    width: 95% !important;
-    padding: 18px 20px !important;
-    gap: 18px !important;
-    min-height: 100px !important;
-    height: auto !important;
+    flex-direction: row;
+    max-width: 400px;
+    width: 95%;
+    padding: 20px 22px;
+    gap: 20px;
+    min-height: 105px;
   }
   
   html[dir="rtl"] .lead-member {
-    flex-direction: row-reverse !important;
-    justify-content: flex-start !important;
+    flex-direction: row-reverse;
   }
   
   .lead-member .team-photo-wrapper {
-    width: 100px !important;
-    height: 100px !important;
-    flex-shrink: 0 !important;
-    flex-grow: 0 !important;
-    margin: 0 !important;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    margin: 0;
   }
   
   .lead-member .team-info {
-    flex: 1 1 auto !important;
-    flex-grow: 1 !important;
-    min-width: 200px !important;
-    max-width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: flex-start !important;
-    gap: 6px !important;
-    overflow: visible !important;
-    width: auto !important;
+    flex: 1;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
   }
   
   html[dir="rtl"] .lead-member .team-info {
-    align-items: flex-end !important;
+    align-items: flex-end;
   }
   
   .lead-member .team-info .team-name {
-    font-size: clamp(16px, 5vw, 19px) !important;
-    font-weight: 700 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    line-height: 1.4 !important;
-    text-align: left !important;
-    white-space: normal !important;
-    word-wrap: break-word !important;
-    overflow: visible !important;
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    letter-spacing: 0.3px !important;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.4;
+    text-align: left;
+    display: block;
   }
   
   html[dir="rtl"] .lead-member .team-info .team-name {
-    text-align: right !important;
+    text-align: right;
   }
   
   .lead-member .team-info .team-name::after {
-    margin: 8px 0 0 !important;
-    width: 50px !important;
+    margin: 8px 0 0;
+    width: 50px;
   }
   
   .lead-member .team-info .team-role {
-    font-size: clamp(12px, 4vw, 14px) !important;
-    font-weight: 600 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: left !important;
-    display: block !important;
-    width: 100% !important;
-    white-space: normal !important;
-    overflow: visible !important;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+    text-align: left;
+    display: block;
   }
   
   html[dir="rtl"] .lead-member .team-info .team-role {
-    text-align: right !important;
+    text-align: right;
   }
   
-  /* Hide ornament corners on mobile */
   .ornament-corner {
-    display: none !important;
+    display: none;
   }
 }
 

@@ -19,17 +19,15 @@
   </div>
 
   <!-- Navigation Links -->
- <ul class="nav-links" id="navLinks">
-  <li><a href="#home" class="lang" data-fa="خانه" data-en="Home">خانه</a></li>
-  <li><a href="#about" class="lang" data-fa="درباره ما" data-en="About">درباره ما</a></li>
-  <li><a href="#features" class="lang" data-fa="ویژگی‌ها" data-en="Features">ویژگی‌ها</a></li>
-  <!-- ✅ New Team Link -->
-  <li><a href="#team" class="lang" data-fa="تیم ما" data-en="Our Team">تیم ما</a></li>
-  <li><a href="#gallery" class="lang" data-fa="گالری" data-en="Gallery">گالری</a></li>
-  <li><a href="#location" class="lang" data-fa="موقعیت" data-en="Location">موقعیت</a></li>
-  <li><a href="#contact" class="lang" data-fa="تماس" data-en="Contact">تماس</a></li>
-</ul>
-
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="lang" data-fa="خانه" data-en="Home">خانه</a></li>
+    <li><a href="#about" class="lang" data-fa="درباره ما" data-en="About">درباره ما</a></li>
+    <li><a href="#features" class="lang" data-fa="ویژگی‌ها" data-en="Features">ویژگی‌ها</a></li>
+    <li><a href="#team" class="lang" data-fa="تیم ما" data-en="Our Team">تیم ما</a></li>
+    <li><a href="#gallery" class="lang" data-fa="گالری" data-en="Gallery">گالری</a></li>
+    <li><a href="#location" class="lang" data-fa="موقعیت" data-en="Location">موقعیت</a></li>
+    <li><a href="#contact" class="lang" data-fa="تماس" data-en="Contact">تماس</a></li>
+  </ul>
 
   <!-- Language Switcher at Bottom -->
   <div class="language-switcher">
@@ -39,7 +37,7 @@
 
 </aside>
 
-<!-- ✅ HAMBURGER BUTTON - OUTSIDE sidebar for better z-index control -->
+<!-- ✅ HAMBURGER BUTTON -->
 <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
   <span></span>
   <span></span>
@@ -51,8 +49,6 @@
 
 <!-- ✅ Main Content Wrapper -->
 <main class="main-content">
-
-
 
 <header>
   <section id="home" class="hero">
@@ -76,12 +72,7 @@
     <div class="about-content">
       <div class="about-text">
         <h2 class="lang" data-fa="درباره رایان تاور" data-en="About Rayan Tower">درباره رایان تاور</h2>
-
-        <p class="lang" data-fa="رایان تاور نماد یک زندگی مدرن، مصؤن و باوقار در شهر مزار شریف است؛ پروژه‌ای که با نگاه آینده‌نگر، کیفیت مهندسی‌شده و طراحی شهری معاصر ساخته می‌شود.
-این برج ترکیبی هماهنگ از فضاهای تجارتی ممتاز و واحدهای رهایشی لوکس است؛ جایی که آسایش، امنیت و ارزش سرمایه‌گذاری در کنار هم قرار گرفته‌اند." data-en="Ryan Tower is a symbol of modern, safe and dignified living in the city of Mazar-e Sharif; a project built with a forward-looking vision, engineered quality and contemporary urban design.
-This tower is a harmonious combination of premium commercial spaces and luxury residential units; where comfort, security and investment value come together.">رایان تاور .</p>
-
-
+        <p class="lang" data-fa="رایان تاور نماد یک زندگی مدرن، مصؤن و باوقار در شهر مزار شریف است." data-en="Ryan Tower is a symbol of modern, safe and dignified living in the city of Mazar-e Sharif.">رایان تاور نماد یک زندگی مدرن، مصؤن و باوقار در شهر مزار شریف است.</p>
         <div class="features">
           <div class="feature lang" data-fa="آپارتمان‌های لوکس" data-en="Luxury Apartments">آپارتمان‌های لوکس</div>
           <div class="feature lang" data-fa="معماری مدرن" data-en="Modern Architecture">معماری مدرن</div>
@@ -93,8 +84,6 @@ This tower is a harmonious combination of premium commercial spaces and luxury r
     </div>
   </div>
 </section>
-
-
 
 <section id="features" class="features-section">
   <h2 class="section-title lang" data-fa="ویژگی‌ها" data-en="Features">ویژگی‌ها</h2>
@@ -108,8 +97,7 @@ This tower is a harmonious combination of premium commercial spaces and luxury r
   </div>
 </section>
 
-
-
+<!-- ✅ TEAM SECTION (Below Features) -->
 <section id="team" class="team-section-main">
   <div class="team-container">
     <h2 class="team-main-title lang" data-fa="تیم حرفه‌ای ما" data-en="Our Professional Team">تیم حرفه‌ای ما</h2>
@@ -117,7 +105,7 @@ This tower is a harmonious combination of premium commercial spaces and luxury r
     
     <div class="team-grid">
       
-      <!-- 1. TEAM LEADER (Top Center) -->
+      <!-- TEAM LEADER (Top Center) -->
       <div class="team-member lead-member">
         <div class="team-photo-wrapper">
           <img src="team-lead.jpg" alt="Team Lead" class="team-photo">
@@ -125,11 +113,13 @@ This tower is a harmonious combination of premium commercial spaces and luxury r
           <div class="ornament-corner top-left"></div>
           <div class="ornament-corner bottom-right"></div>
         </div>
-        <h4 class="team-name lang" data-fa=" احمد رضایی" data-en="Ahmad Rezaei">احمد رضایی</h4>
-        <p class="team-role lang" data-fa="مدیر پروژه" data-en="Project Manager">مدیر پروژه</p>
+        <div class="team-info">
+          <h4 class="team-name lang" data-fa="احمد رضایی" data-en="Ahmad Rezaei">احمد رضایی</h4>
+          <p class="team-role lang" data-fa="مدیر پروژه" data-en="Project Manager">مدیر پروژه</p>
+        </div>
       </div>
 
-      <!-- 2. FOUR MEMBERS (Horizontal Row) -->
+      <!-- 4 TEAM MEMBERS (Horizontal Row) -->
       <div class="team-row">
         
         <div class="team-member">
@@ -137,8 +127,10 @@ This tower is a harmonious combination of premium commercial spaces and luxury r
             <img src="team1.jpg" alt="Maryam" class="team-photo">
             <div class="photo-glow"></div>
           </div>
-          <h4 class="team-name lang" data-fa="مریم حسینی" data-en="Maryam Hosseini">مریم حسینی</h4>
-          <p class="team-role lang" data-fa="معمار ارشد" data-en="Senior Architect">معمار ارشد</p>
+          <div class="team-info">
+            <h4 class="team-name lang" data-fa="مریم حسینی" data-en="Maryam Hosseini">مریم حسینی</h4>
+            <p class="team-role lang" data-fa="معمار ارشد" data-en="Senior Architect">معمار ارشد</p>
+          </div>
         </div>
 
         <div class="team-member">
@@ -146,8 +138,10 @@ This tower is a harmonious combination of premium commercial spaces and luxury r
             <img src="team2.jpg" alt="Ali" class="team-photo">
             <div class="photo-glow"></div>
           </div>
-          <h4 class="team-name lang" data-fa="علی احمدی" data-en="Ali Ahmadi">علی احمدی</h4>
-          <p class="team-role lang" data-fa="مهندس عمران" data-en="Civil Engineer">مهندس عمران</p>
+          <div class="team-info">
+            <h4 class="team-name lang" data-fa="علی احمدی" data-en="Ali Ahmadi">علی احمدی</h4>
+            <p class="team-role lang" data-fa="مهندس عمران" data-en="Civil Engineer">مهندس عمران</p>
+          </div>
         </div>
 
         <div class="team-member">
@@ -155,8 +149,10 @@ This tower is a harmonious combination of premium commercial spaces and luxury r
             <img src="team3.jpg" alt="Fatima" class="team-photo">
             <div class="photo-glow"></div>
           </div>
-          <h4 class="team-name lang" data-fa="فاطمه کریمی" data-en="Fatima Karimi">فاطمه کریمی</h4>
-          <p class="team-role lang" data-fa="طراح داخلی" data-en="Interior Designer">طراح داخلی</p>
+          <div class="team-info">
+            <h4 class="team-name lang" data-fa="فاطمه کریمی" data-en="Fatima Karimi">فاطمه کریمی</h4>
+            <p class="team-role lang" data-fa="طراح داخلی" data-en="Interior Designer">طراح داخلی</p>
+          </div>
         </div>
 
         <div class="team-member">
@@ -164,16 +160,16 @@ This tower is a harmonious combination of premium commercial spaces and luxury r
             <img src="team4.jpg" alt="Mohammad" class="team-photo">
             <div class="photo-glow"></div>
           </div>
-          <h4 class="team-name lang" data-fa="محمد نوری" data-en="Mohammad Noori">محمد نوری</h4>
-          <p class="team-role lang" data-fa="مشاور فروش" data-en="Sales Consultant">مشاور فروش</p>
+          <div class="team-info">
+            <h4 class="team-name lang" data-fa="محمد نوری" data-en="Mohammad Noori">محمد نوری</h4>
+            <p class="team-role lang" data-fa="مشاور فروش" data-en="Sales Consultant">مشاور فروش</p>
+          </div>
         </div>
 
       </div>
     </div>
   </div>
 </section>
-
-
 
 <section id="gallery">
   <h2 class="lang" data-fa="گالری پروژه" data-en="Project Gallery">گالری پروژه</h2>
